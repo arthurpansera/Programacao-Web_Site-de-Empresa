@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+body{
+    background-color:antiquewhite;
+    font-family: "Inter", sans-serif;
+}
+
+nav{
+    font-family: "Play-fair Display", serif;
+    font-weight: 500;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 25px;
+    padding-right: 40px;
+    padding-bottom: 25px;
+    border-bottom: 4px solid red;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul a{
+    color: white;
+    margin: 0 16px;
+    text-transform: uppercase;
+    font-size: 22px;
+    display: block;
+}
+
+nav ul a:not(.btn)::after{
+    content: "";
+    background-color: white;
+    height: 3px;
+    width: 0;
+    display: block;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+nav ul a:hover::after{
+    width: 100%;
+}
+
+section{
+    padding: 55px 0;
+}
+
+header .container p{
+    color: white;
+}
+
+header .container{
+    background-image: linear-gradient(150.24deg, rgba(124, 124, 124, 0.558) 10%, rgba(37, 37, 37, 0.541) 95%), url('imagens/banner-image.jpg');
+    max-width: 100%;
+    background-size: cover;
+}
+
+header{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    height: 620px;
+}
+
+.banner .banner-text{
+    margin: 100px;
+    text-align: center;
+    padding: 0 90px;
+    padding-top: 50px;
+}
+
+.banner .banner-text h1{
+    font-size: 90px;
+    color: white;
+}
+
+.banner .banner-text h3{
+    font-size: 50px;
+    color: white;
+}
+
+.banner .banner-text p{
+    font-size: 22px;
+    color: rgb(219, 219, 219);
+    margin: 14px 0;
+}
+
+.introduction .container{
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.introduction .introduction-text{
+    width: 50%;
+    margin: 30px;
+    padding: 0 70px;
+}
+
+.introduction .introduction-text h3{
+    font-size: 40px;
+    color: rgb(98, 71, 1);
+    padding-bottom: 20px;
+}
+
+.introduction .introduction-text p{
+    font-family: "Play-fair Display", serif;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 1.5em;;
+    color: rgb(81, 45, 31);
+    text-align: justify;
+}
+
+.introduction .introduction-img img{
+    width: 626px;
+    padding-right: 75px;
+}
+
+.plates .plates-images{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.plates .img-plate-2 h3{
+    font-size: 30px;
+    color: rgb(98, 71, 1);
+    padding-bottom: 20px;
+    padding-left: 75px;
+}
+
+.plates .img-plate-1 h3{
+    font-size: 30px;
+    color: rgb(98, 71, 1);
+    padding-bottom: 20px;
+    padding-left: 75px;
+}
+
+.plates .img-plate-1 img{
+    width: 726px;
+    padding-right: 75px;
+    padding-left: 75px;
+}
+
+.plates .img-plate-2 img{
+    width: 726px;
+    padding-right: 75px;
+    padding-left: 75px;
+}
+
+.plates .descption{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    padding-top: 60px;
+}
+
+.plates .descption-plates-1{
+    font-family: "Play-fair Display", serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5em;;
+    color: rgb(81, 45, 31);
+    text-align: justify;
+    width: 726px;
+    padding-right: 75px;
+    padding-left: 75px;
+}
+
+.plates .descption-plates-2{
+    font-family: "Play-fair Display", serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5em;;
+    color: rgb(81, 45, 31);
+    text-align: justify;
+    width: 726px;
+    padding-right: 75px;
+    padding-left: 75px;
+}
+
+.plates .container-horario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    padding-top: 60px;
+    font-family: "Play-fair Display", serif;
+    font-size: 20px;
+    color: rgb(81, 45, 31);
+}
+
+.plates .container-horario p h3{
+    font-weight: bold;
+}
+
+.plates .container-horario .reserva{
+    text-align: center;
+}
+
+.plates .container-horario .horarios{
+    text-align:end;
+}
+
+.line{
+    border: 0;
+    height: 4px;
+    background: #864b03;
+    margin: 20px 0;
+    margin-left: 90px;
+    margin-top: 50px;
+    width: 1300px;
+}
+
+footer{
+
+    text-align: center;
+    background-color: green;
+    border-top: 4px solid red;
+    padding: 30px 0px;
+}
+
+footer p{
+    text-align: center;
+    color: white;
+}
