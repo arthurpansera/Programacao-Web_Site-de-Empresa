@@ -19,9 +19,97 @@
             </nav>
         </div>
     </header>
-    <div class="content">
+    <section class="content">
         <h1>Faça seu Pedido</h1>
-    </div>
+        <form>
+            <div class="pratos">
+                <label for="nome">CPF</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu CPF" required>
+
+                <label for="prato">O que você deseja pedir?:</label>
+                <select id="prato" name="prato" size="4">
+                    <option value="lasanha">Lasanha</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="risoto">Risoto</option>
+                    <option value="spaghetti">Spaghetti</option>
+                    <option value="nhoque">Nhoque</option>
+                    <option value="parmegiana-frango">Frango à Parmegiana</option>
+                </select>
+            </div>
+
+            <div class="tamanhos">
+                <label>Escolha o tamanho do seu prato:</label>
+                <input type="radio" id="pequeno" name="molhos" value="pequeno" checked>
+                <label for="pequeno">Pequeno</label><br>
+                <input type="radio" id="medio" name="molhos" value="medio" checked>
+                <label for="medio">Médio</label><br>
+                <input type="radio" id="grande" name="molhos" value="grande" checked>
+                <label for="grande">Grande</label><br>
+            </div>
+
+            <div class="molhos">
+                <label>Tipo de molho:</label>
+                <input type="radio" id="bolagnese" name="molhos" value="bolagnese" checked>
+                <label for="bolagnese">Molho a Bolognese</label><br>
+            
+                <input type="radio" id="carbonara" name="molhos" value="carbonara">
+                <label for="carbonara">À Carbonara</label><br>
+        
+                <input type="radio" id="pesto-manjericao" name="molhos" value="pesto-manjericao">
+                <label for="pesto-manjericao">Pesto de Manjericão</label><br>
+        
+                <input type="radio" id="molho-branco" name="molhos" value="molho-branco">
+                <label for="molho-branco">Molho Branco</label><br>
+            </div>
+
+            <div class="adicionais">
+                <label>Adicionais:</label>
+                <input type="checkbox" id="queijo-extra" name="adicionais" value="queijo-extra">
+                <label for="queijo-extra">Queijo Extra</label><br>
+
+                <input type="checkbox" id="molho-extra" name="adicionais" value="molho-extra">
+                <label for="molho-extra">Molho Extra</label><br>
+
+                <input type="checkbox" id="azeitonas" name="adicionais" value="azeitonas">
+                <label for="azeitonas">Azeitonas</label><br>
+
+                <input type="checkbox" id="pimenta" name="adicionais" value="pimenta">
+                <label for="pimenta">Pimenta</label><br>
+            </div>
+
+            <div class="bebidas">
+                <label>Adicionais:</label>
+                <input type="checkbox" id="vinho-branco" name="bebidas" value="vinho-branco">
+                <label for="vinho-branco">Vinho Branco</label><br>
+
+                <input type="checkbox" id="vinho-tinto" name="bebidas" value="vinho-tinto">
+                <label for="vinho-tinto">Vinho Tinto</label><br>
+
+                <input type="checkbox" id="vinho-rosé" name="bebidas" value="vinho-rosé">
+                <label for="vinho-rosé">Vinho rosé</label><br>
+
+                <input type="checkbox" id="refrigerante" name="bebidas" value="refrigerante">
+                <label for="refrigerante">Refrigerante</label><br>
+            </div>
+
+            <div class="entrega">
+                <label>Tipo de Entrega:</label>
+                <input type="radio" id="delivery" name="entrega" value="delivery" checked>
+                <label for="delivery">Pedido para Entrega</label><br>
+            
+                <input type="radio" id="retirada" name="entrega" value="retirada">
+                <label for="retirada">Pedido para Retirada</label><br>
+            </div>
+        
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" name="observacoes" rows="4" placeholder="Alguma observação sobre seu pedido?"></textarea>
+
+            <div class="buttons">
+                <button type="submit">Enviar Pedido</button>
+                <button type="reset">Limpar</button>
+            </div>
+        </form>
+    </section>
 </body>
 <footer>
     <p>&copy; 2024 - Mauricius - Italian Food. Todos os direitos reservados.</p>
