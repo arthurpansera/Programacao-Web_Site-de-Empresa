@@ -20,43 +20,42 @@
         </div>
     </header>
     <section class="container">
-        <div class="title">
-            <h1>Entre em Contato Conosco</h1>
-        </div>
-        <div class="form">
-            <form action="mailto:seu_email@exemplo.com" method="post" enctype="text/plain">
-                <div>
-                    <div class="question">
-                        <label for="text">Nome:</label><br>
-                        <input type="text" id="text" name="text">
+        <h1 class="title">Entre em Contato Conosco</h1>
+        <div class="box">
+            <form action="" method="POST">
+                <fieldset>
+                    <legend><b>Formulário de Contato</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome completo</label>
                     </div>
-                    <div class="question">
-                        <label for="text">CPF:</label><br>
-                        <input type="text" id="text" name="text">
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                        <label for="cpf" class="labelInput">CPF</label>
                     </div>
-                </div>
-                <div>
-                    <div class="question">
-                        <label for="text">Data de Nascimento:</label><br>
-                        <input type="text" id="text" name="text">
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="email" id="email" class="inputUser" required>
+                        <label for="email" class="labelInput">E-mail</label>
                     </div>
-                    <div class="question">
-                        <label for="text">Telefone:</label><br>
-                        <input type="text" id="text" name="text">
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="telefone" id="telefone" class="inputUser" required>
+                        <label for="telefone" class="labelInput">Telefone</label>
                     </div>
-                </div>
-                <div>
-                    <div class="question">
-                        <label for="multiple">Email:</label><br>
-                        <input type="text" id="text" name="text">
+                    <br><br>
+                    <label for="data_nascimento" class="data"><b>Data de nascimento:</b></label>
+                    <input type="date" name="data_nascimento" id="data_nascimento" required>
+                    <br><br>
+                    <div class="textBox">
+                        <label for="mensagem" class="msg"><b>Mensagem:</b></label>
+                        <textarea name="mensagem" id="mensagem" placeholder="Escreva aqui" required></textarea>
                     </div>
-                    <div class="question">
-                        <label for="multiple">Mensagem:</label><br>
-                        <input type="text" id="text" name="text">
-                    </div>
-                    <button type="submit">Enviar</button>
-                    <button type="reset">Reset</button>
-                </div>
+                    <br><br>
+                    <input type="submit" name="submit" id="submit">
+                </fieldset>
             </form>
         </div>
     </section>
