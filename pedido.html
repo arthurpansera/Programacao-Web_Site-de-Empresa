@@ -20,93 +20,134 @@
         </div>
     </header>
     <section class="content">
-        <h1>Faça seu Pedido</h1>
-        <form>
-            <div class="pratos">
-                <label for="nome">CPF</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu CPF" required>
-
-                <label for="prato">O que você deseja pedir?:</label>
-                <select id="prato" name="prato" size="4">
-                    <option value="lasanha">Lasanha</option>
-                    <option value="pizza">Pizza</option>
-                    <option value="risoto">Risoto</option>
-                    <option value="spaghetti">Spaghetti</option>
-                    <option value="nhoque">Nhoque</option>
-                    <option value="parmegiana-frango">Frango à Parmegiana</option>
-                </select>
+        <form class="box">
+            <div class="plates">
+                <div class="inputBox">
+                    <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                    <label for="cpf" class="labelInput">CPF</label>
+                </div>
+                    
+                <label for="plates" class="labels">Selecione o prato:</label>
+                <div class="select-container">
+                    <select id="prato" name="prato" class="select-box">
+                        <option value="escolha">[Escolha]</option>
+                        <option value="lasanha">Lasanha</option>
+                        <option value="pizza">Pizza</option>
+                        <option value="risoto">Risoto</option>
+                        <option value="spaghetti">Spaghetti</option>
+                        <option value="nhoque">Nhoque</option>
+                        <option value="parmegiana-frango">Frango à Parmegiana</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="tamanhos">
-                <label>Escolha o tamanho do seu prato:</label>
-                <input type="radio" id="pequeno" name="molhos" value="pequeno" checked>
-                <label for="pequeno">Pequeno</label><br>
-                <input type="radio" id="medio" name="molhos" value="medio" checked>
-                <label for="medio">Médio</label><br>
-                <input type="radio" id="grande" name="molhos" value="grande" checked>
-                <label for="grande">Grande</label><br>
+            <div class="sizes">
+                <label class="labels">Escolha o tamanho do seu prato:</label>
+                <div class="options">
+                    <input type="radio" id="pequeno" name="molhos" value="pequeno"  class="radio" checked>
+                    <label for="pequeno">Pequeno</label><br>
+                </div>
+                
+                <div class="options">
+                    <input type="radio" id="medio" name="molhos" value="medio" class="radio" checked>
+                    <label for="medio">Médio</label><br>
+                </div>
+
+                <div class="options">
+                    <input type="radio" id="grande" name="molhos" value="grande" class="radio" checked>
+                    <label for="grande">Grande</label><br>
+                </div>
             </div>
 
-            <div class="molhos">
-                <label>Tipo de molho:</label>
-                <input type="radio" id="bolagnese" name="molhos" value="bolagnese" checked>
-                <label for="bolagnese">Molho a Bolognese</label><br>
-            
-                <input type="radio" id="carbonara" name="molhos" value="carbonara">
-                <label for="carbonara">À Carbonara</label><br>
+            <div class="sauce">
+                <label class="labels">Tipo de molho:</label>
+                <div class="options" >
+                    <input type="radio" id="bolagnese" name="molhos" value="bolagnese" class="radio" checked>
+                    <label for="bolagnese">Molho a Bolognese</label><br>
+                </div class="options">
+
+                <div class="options">
+                    <input type="radio" id="carbonara" name="molhos" value="carbonara" class="radio" checked>
+                    <label for="carbonara">À Carbonara</label><br>
+                </div>
+
+                <div class="options">
+                    <input type="radio" id="pesto-manjericao" name="molhos" value="pesto-manjericao" class="radio" checked>
+                    <label for="pesto-manjericao">Pesto de Manjericão</label><br>
+                </div>
+
+                <div class="options">
+                    <input type="radio" id="molho-branco" name="molhos" value="molho-branco" class="radio" checked>
+                    <label for="molho-branco">Molho Branco</label><br>
+                </div>
+            </div>
+
+            <div class="additional">
+                <label class="labels">Adicionais:</label>
+                <div class="options">
+                    <input type="checkbox" id="queijo-extra" name="adicionais" value="queijo-extra" class="checkBox">
+                    <label for="queijo-extra" class="additionalLabel">Queijo Extra</label><br>   
+                </div>
+
+                <div class="options">
+                    <input type="checkbox" id="molho-extra" name="adicionais" value="molho-extra" class="checkBox">
+                    <label for="molho-extra" class="additionalLabel">Molho Extra</label><br>
+                </div>
+
+                <div class="options" >
+                    <input type="checkbox" id="azeitonas" name="adicionais" value="azeitonas" class="checkBox">
+                    <label for="azeitonas" class="additionalLabel">Azeitonas</label><br>
+                </div>
+
+                <div class="options">
+                    <input type="checkbox" id="pimenta" name="adicionais" value="pimenta" class="checkBox">
+                    <label for="pimenta" class="additionalLabel">Pimenta</label><br>
+                </div>
+            </div>
+
+            <div class="drinks">
+                <label class="labels">Selecione as bebidas:</label>
         
-                <input type="radio" id="pesto-manjericao" name="molhos" value="pesto-manjericao">
-                <label for="pesto-manjericao">Pesto de Manjericão</label><br>
-        
-                <input type="radio" id="molho-branco" name="molhos" value="molho-branco">
-                <label for="molho-branco">Molho Branco</label><br>
+                <div class="options">
+                    <input type="checkbox" id="vinho-branco" name="bebidas" value="vinho-branco" class="checkBox">
+                    <label for="vinho-branco" class="drinkLabel">Vinho Branco</label><br>
+                </div>
+
+                <div class="options">
+                    <input type="checkbox" id="vinho-tinto" name="bebidas" value="vinho-tinto" class="checkBox">
+                    <label for="vinho-tinto" class="drinkLabel">Vinho Tinto</label><br>
+                </div>
+
+                <div class="options">
+                    <input type="checkbox" id="vinho-rose" name="bebidas" value="vinho-rose" class="checkBox">
+                    <label for="vinho-rose" class="drinkLabel">Vinho rosé</label><br>
+                </div>
+
+                <div class="options">
+                    <input type="checkbox" id="refrigerante" name="bebidas" value="refrigerante" class="checkBox">
+                    <label for="refrigerante" class="drinkLabel">Refrigerante</label><br>
+                </div>
             </div>
 
-            <div class="adicionais">
-                <label>Adicionais:</label>
-                <input type="checkbox" id="queijo-extra" name="adicionais" value="queijo-extra">
-                <label for="queijo-extra">Queijo Extra</label><br>
+            <div class="delivery">
+                <label class="labels">Tipo de Entrega</label>
+                <div class="options">
+                    <input type="radio" id="delivery" name="entrega" value="delivery"  class="radio" checked>
+                    <label for="delivery">Pedido para Entrega</label><br>
+                </div>
 
-                <input type="checkbox" id="molho-extra" name="adicionais" value="molho-extra">
-                <label for="molho-extra">Molho Extra</label><br>
-
-                <input type="checkbox" id="azeitonas" name="adicionais" value="azeitonas">
-                <label for="azeitonas">Azeitonas</label><br>
-
-                <input type="checkbox" id="pimenta" name="adicionais" value="pimenta">
-                <label for="pimenta">Pimenta</label><br>
+                <div class="options">
+                    <input type="radio" id="retirada" name="entrega" value="retirada" class="radio" checked>
+                    <label for="retirada">Pedido para Retirada</label><br>
+                </div>
             </div>
-
-            <div class="bebidas">
-                <label>Adicionais:</label>
-                <input type="checkbox" id="vinho-branco" name="bebidas" value="vinho-branco">
-                <label for="vinho-branco">Vinho Branco</label><br>
-
-                <input type="checkbox" id="vinho-tinto" name="bebidas" value="vinho-tinto">
-                <label for="vinho-tinto">Vinho Tinto</label><br>
-
-                <input type="checkbox" id="vinho-rosé" name="bebidas" value="vinho-rosé">
-                <label for="vinho-rosé">Vinho rosé</label><br>
-
-                <input type="checkbox" id="refrigerante" name="bebidas" value="refrigerante">
-                <label for="refrigerante">Refrigerante</label><br>
+            <div class="observation">
+                <label for="observacoes" class="labels">Observações</label>
+                <textarea id="observacoes" name="observacoes" placeholder="Alguma observação sobre seu pedido?" class="obsTextArea"></textarea>
             </div>
-
-            <div class="entrega">
-                <label>Tipo de Entrega:</label>
-                <input type="radio" id="delivery" name="entrega" value="delivery" checked>
-                <label for="delivery">Pedido para Entrega</label><br>
-            
-                <input type="radio" id="retirada" name="entrega" value="retirada">
-                <label for="retirada">Pedido para Retirada</label><br>
-            </div>
-        
-            <label for="observacoes">Observações:</label>
-            <textarea id="observacoes" name="observacoes" rows="4" placeholder="Alguma observação sobre seu pedido?"></textarea>
-
             <div class="buttons">
-                <button type="submit">Enviar Pedido</button>
-                <button type="reset">Limpar</button>
+                <button type="submit">Finalizar Pedido</button>
+                <button type="reset">Limpar Tudo</button>
             </div>
         </form>
     </section>
