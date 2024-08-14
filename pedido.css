@@ -92,6 +92,7 @@ nav ul a:hover::after{
     padding-top: 10px;
     font-family: "Play-fair Display", serif;
     position: relative;
+    width: 80%;
 }
 
 .inputUser{
@@ -102,21 +103,25 @@ nav ul a:hover::after{
     color: rgb(81, 45, 31);
     font-family: "Play-fair Display", serif;
     font-weight: 500;
-    font-size: 25px;
-    width: 100%;
+    font-size: 17px;
+    width: 80%;
+    margin-left: 11%;
     letter-spacing: 2px;
-    padding-top: 50px;
+    padding-top: 55px;
 }
 
 .labelInput{
     position: absolute;
+    font-size: 20px;
     top: 0px;
     left: 0px;
     pointer-events: none;
     transition: .5s;
-    padding-left: 20px;
+    padding-left: 119px;
     padding-right: 20px;
-    padding-top: 50px;
+    padding-top: 40px;
+
+    
 }
 
 .inputUser:focus ~ .labelInput,
@@ -163,16 +168,15 @@ nav ul a:hover::after{
 .select-container{
     display: flex;
     justify-content: center;
-    min-width: 250px;
-    height: 50px;
 }
 
 .select-box{
     border:none;
-    appearance: none;
-    padding: 0 30px 0 15px;
-    width: 100%;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
+    font-size: 17px;
+    border-radius: 5px;
+    height: 125px;
+    width: 80%;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3)
 }
 
 .radio{
@@ -243,6 +247,7 @@ footer{
 }
 
 footer p{
+    font-family: "Inter", sans-serif;
     text-align: center;
     color: white;
 }
