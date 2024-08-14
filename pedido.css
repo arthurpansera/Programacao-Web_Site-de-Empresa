@@ -58,6 +58,7 @@ nav ul a:hover::after{
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: rgb(77, 55, 1);
 }
 .content .box{
     position:relative;
@@ -69,7 +70,6 @@ nav ul a:hover::after{
 
 .content .labels{
     font-size: 22px;
-    color: rgb(0, 0, 0);
     padding-bottom: 10px;
     padding-top: 20px;
     margin-left: 10%;
