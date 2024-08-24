@@ -6,152 +6,192 @@
     <link href="pedido.css" rel="stylesheet">
     <title>Mauricius - Italian Food | Faça seu Pedido</title>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav class="nav">
-                <ul class="ul">
-                    <a href="home.html">Home</a>
-                    <a href="informacoes.html">Informações</a>
-                    <a href="contato.html">Contato</a>
-                    <a href="pedido.html">Pedido</a>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section class="content">
-        <form class="box" action="mailto:mauriciusitalianfood@gmail.com" method="POST">
-            <div class="plates">
-                <div class="inputBox">
-                    <input type="text" name="cpf" id="cpf" class="inputUser" placeholder="Digite seu CPF " required>
-                    <label for="cpf" class="labelInput">CPF:</label>
-                </div>
-                    
-                <label for="plates" class="labels">Selecione o prato:</label>
-                <div class="select-container">
-                    <select id="prato" name="prato" class="select-box" size="10">
-                        <option value="lasanha">Lasanha</option>
-                        <option value="pizza">Pizza</option>
-                        <option value="risoto">Risoto</option>
-                        <option value="spaghetti">Spaghetti</option>
-                        <option value="nhoque">Nhoque</option>
-                        <option value="parmegiana-frango">Frango à Parmegiana</option>
-                    </select>
-                </div>
+    <body>
+        <header>
+            <div class="container">
+                <nav class="nav">
+                    <ul class="ul">
+                        <a href="home.html">Home</a>
+                        <a href="informacoes.html">Informações</a>
+                        <a href="contato.html">Contato</a>
+                        <a href="pedido.html">Pedido</a>
+                    </ul>
+                </nav>
             </div>
+        </header>
+        <section class="content">
+            <div class="box">
+                <form name="form" id="form" action="mailto:mauriciusitalianfood@gmail.com" method="POST">
+                    <div class="plates">
+                        <div class="inputBox">
+                            <input type="text" name="cpf" id="cpf" class="inputUser" placeholder="Digite o seu CPF" required>
+                            <label for="cpf" class="labelInput">CPF:</label>
+                        </div>
+                            
+                        <label for="plates" class="labels">Selecione o prato:</label>
+                        <div class="select-container">
+                            <select id="prato" name="prato" class="select-box" size="10">
+                                <option value="1">Lasanha</option>
+                                <option value="2">Pizza</option>
+                                <option value="3">Risoto</option>
+                                <option value="4">Spaghetti</option>
+                                <option value="5">Nhoque</option>
+                                <option value="6">Frango à Parmegiana</option>
+                            </select>
+                        </div>
+                    </div>
 
-            <div class="sizes">
-                <label class="labels">Escolha o tamanho do seu prato:</label>
-                <div class="options">
-                    <input type="radio" id="pequeno" name="molhos" value="pequeno"  class="radio" checked>
-                    <label for="pequeno">Pequeno</label><br>
-                </div>
+                    <div class="sizes">
+                        <label class="labels">Escolha o tamanho do seu prato:</label>
+                        <div class="options">
+                            <input type="radio" id="pequeno" name="tamanhos" value="1"  class="radio">
+                            <label for="pequeno">Pequeno</label><br>
+                        </div>
+                        
+                        <div class="options">
+                            <input type="radio" id="medio" name="tamanhos" value="2" class="radio">
+                            <label for="medio">Médio</label><br>
+                        </div>
+
+                        <div class="options">
+                            <input type="radio" id="grande" name="tamanhos" value="3" class="radio">
+                            <label for="grande">Grande</label><br>
+                        </div>
+                    </div>
+
+                    <div class="sauce">
+                        <label class="labels">Tipo de molho:</label>
+                        <div class="options" >
+                            <input type="radio" id="bolagnese" name="molhos" value="1" class="radio">
+                            <label for="bolagnese">Molho a Bolognese</label><br>
+                        </div class="options">
+
+                        <div class="options">
+                            <input type="radio" id="carbonara" name="molhos" value="2" class="radio">
+                            <label for="carbonara">À Carbonara</label><br>
+                        </div>
+
+                        <div class="options">
+                            <input type="radio" id="pestoManjericao" name="molhos" value="3" class="radio">
+                            <label for="pesto-manjericao">Pesto de Manjericão</label><br>
+                        </div>
+
+                        <div class="options">
+                            <input type="radio" id="molhoBranco" name="molhos" value="4" class="radio">
+                            <label for="molho-branco">Molho Branco</label><br>
+                        </div>
+                    </div>
+
+                    <div class="additional">
+                        <label class="labels">Adicionais:</label>
+                        <div class="options">
+                            <input type="checkbox" id="queijoExtra" name="adicionais" value="1" class="checkBox">
+                            <label for="queijo-extra" class="additionalLabel">Queijo Extra</label><br>   
+                        </div>
+
+                        <div class="options">
+                            <input type="checkbox" id="molhoExtra" name="adicionais" value="2" class="checkBox">
+                            <label for="molho-extra" class="additionalLabel">Molho Extra</label><br>
+                        </div>
+
+                        <div class="options" >
+                            <input type="checkbox" id="azeitonas" name="adicionais" value="3" class="checkBox">
+                            <label for="azeitonas" class="additionalLabel">Azeitonas</label><br>
+                        </div>
+
+                        <div class="options">
+                            <input type="checkbox" id="pimenta" name="adicionais" value="4" class="checkBox">
+                            <label for="pimenta" class="additionalLabel">Pimenta</label><br>
+                        </div>
+                    </div>
+
+                    <div class="drinks">
+                        <label class="labels">Selecione as bebidas:</label>
                 
-                <div class="options">
-                    <input type="radio" id="medio" name="molhos" value="medio" class="radio" checked>
-                    <label for="medio">Médio</label><br>
-                </div>
+                        <div class="options">
+                            <input type="checkbox" id="vinhoBranco" name="bebidas" value="1" class="checkBox">
+                            <label for="vinho-branco" class="drinkLabel">Vinho Branco</label><br>
+                        </div>
 
-                <div class="options">
-                    <input type="radio" id="grande" name="molhos" value="grande" class="radio" checked>
-                    <label for="grande">Grande</label><br>
-                </div>
+                        <div class="options">
+                            <input type="checkbox" id="vinhoTinto" name="bebidas" value="2" class="checkBox">
+                            <label for="vinho-tinto" class="drinkLabel">Vinho Tinto</label><br>
+                        </div>
+
+                        <div class="options">
+                            <input type="checkbox" id="vinhoRose" name="bebidas" value="3" class="checkBox">
+                            <label for="vinho-rose" class="drinkLabel">Vinho Rosé</label><br>
+                        </div>
+
+                        <div class="options">
+                            <input type="checkbox" id="refrigerante" name="bebidas" value="4" class="checkBox">
+                            <label for="refrigerante" class="drinkLabel">Refrigerante</label><br>
+                        </div>
+                    </div>
+
+                    <div class="delivery">
+                        <label class="labels">Tipo de Entrega:</label>
+                        <div class="options">
+                            <input type="radio" id="delivery" name="entrega" value="1"  class="radio">
+                            <label for="delivery">Pedido para Entrega</label><br>
+                        </div>
+
+                        <div class="options">
+                            <input type="radio" id="retirada" name="entrega" value="2" class="radio">
+                            <label for="retirada">Pedido para Retirada</label><br>
+                        </div>
+                    </div>
+                    <div class="observation">
+                        <label for="observacoes" class="labels">Observações:</label>
+                        <textarea id="observacoes" name="observacoes" placeholder="Alguma observação sobre o seu pedido?" class="obsTextArea"></textarea>
+                    </div>
+                    <div class="buttons">
+                        <input class="btn" type="submit" name="submit" id="submit" value="Finalizar Pedido" onclick="btnSendOnClick()">
+                        <button class="btn" type="reset">Limpar Tudo</button>
+                    </div>
+                </form>
             </div>
+        </section>
+    </body>
+    <script>
+        const cpf = document.getElementById('cpf')
+        const prato = document.getElementById('prato')
+        const pequeno = document.getElementById('pequeno')
+        const delivery = document.getElementById('delivery')
 
-            <div class="sauce">
-                <label class="labels">Tipo de molho:</label>
-                <div class="options" >
-                    <input type="radio" id="bolagnese" name="molhos" value="bolagnese" class="radio" checked>
-                    <label for="bolagnese">Molho a Bolognese</label><br>
-                </div class="options">
-
-                <div class="options">
-                    <input type="radio" id="carbonara" name="molhos" value="carbonara" class="radio" checked>
-                    <label for="carbonara">À Carbonara</label><br>
-                </div>
-
-                <div class="options">
-                    <input type="radio" id="pesto-manjericao" name="molhos" value="pesto-manjericao" class="radio" checked>
-                    <label for="pesto-manjericao">Pesto de Manjericão</label><br>
-                </div>
-
-                <div class="options">
-                    <input type="radio" id="molho-branco" name="molhos" value="molho-branco" class="radio" checked>
-                    <label for="molho-branco">Molho Branco</label><br>
-                </div>
-            </div>
-
-            <div class="additional">
-                <label class="labels">Adicionais:</label>
-                <div class="options">
-                    <input type="checkbox" id="queijo-extra" name="adicionais" value="queijo-extra" class="checkBox">
-                    <label for="queijo-extra" class="additionalLabel">Queijo Extra</label><br>   
-                </div>
-
-                <div class="options">
-                    <input type="checkbox" id="molho-extra" name="adicionais" value="molho-extra" class="checkBox">
-                    <label for="molho-extra" class="additionalLabel">Molho Extra</label><br>
-                </div>
-
-                <div class="options" >
-                    <input type="checkbox" id="azeitonas" name="adicionais" value="azeitonas" class="checkBox">
-                    <label for="azeitonas" class="additionalLabel">Azeitonas</label><br>
-                </div>
-
-                <div class="options">
-                    <input type="checkbox" id="pimenta" name="adicionais" value="pimenta" class="checkBox">
-                    <label for="pimenta" class="additionalLabel">Pimenta</label><br>
-                </div>
-            </div>
-
-            <div class="drinks">
-                <label class="labels">Selecione as bebidas:</label>
-        
-                <div class="options">
-                    <input type="checkbox" id="vinho-branco" name="bebidas" value="vinho-branco" class="checkBox">
-                    <label for="vinho-branco" class="drinkLabel">Vinho Branco</label><br>
-                </div>
-
-                <div class="options">
-                    <input type="checkbox" id="vinho-tinto" name="bebidas" value="vinho-tinto" class="checkBox">
-                    <label for="vinho-tinto" class="drinkLabel">Vinho Tinto</label><br>
-                </div>
-
-                <div class="options">
-                    <input type="checkbox" id="vinho-rose" name="bebidas" value="vinho-rose" class="checkBox">
-                    <label for="vinho-rose" class="drinkLabel">Vinho rosé</label><br>
-                </div>
-
-                <div class="options">
-                    <input type="checkbox" id="refrigerante" name="bebidas" value="refrigerante" class="checkBox">
-                    <label for="refrigerante" class="drinkLabel">Refrigerante</label><br>
-                </div>
-            </div>
-
-            <div class="delivery">
-                <label class="labels">Tipo de Entrega</label>
-                <div class="options">
-                    <input type="radio" id="delivery" name="entrega" value="delivery"  class="radio" checked>
-                    <label for="delivery">Pedido para Entrega</label><br>
-                </div>
-
-                <div class="options">
-                    <input type="radio" id="retirada" name="entrega" value="retirada" class="radio" checked>
-                    <label for="retirada">Pedido para Retirada</label><br>
-                </div>
-            </div>
-            <div class="observation">
-                <label for="observacoes" class="labels">Observações</label>
-                <textarea id="observacoes" name="observacoes" placeholder="Alguma observação sobre seu pedido?" class="obsTextArea"></textarea>
-            </div>
-            <div class="buttons">
-                <input class="btn" type="submit" value="Finalizar Pedido">
-                <button class="btn" type="reset">Limpar Tudo</button>
-            </div>
-        </form>
-    </section>
-</body>
-<footer>
-    <p>&copy; 2024 - Mauricius - Italian Food. Todos os direitos reservados.</p>
-</footer>
+        function btnSendOnClick() {
+            if (cpf.value == "") {
+                alert('Preenchimento obrigatório: CPF')
+                cpf.focus()
+                event.preventDefault();
+            }
+            else if (isNaN(parseInt(cpf.value))) {
+                alert('Tipo de dado inválido: CPF')
+                cpf.value = ""
+                cpf.focus()
+                event.preventDefault();
+            }
+            else if (prato.value === "") {
+                alert('Seleção obrigatória: Prato')
+                prato.focus()
+                event.preventDefault();
+            }
+            else if (!document.querySelector('input[name="tamanhos"]:checked')) {
+                alert('Seleção obrigatória: Tamanho do Prato')
+                pequeno.focus()
+                event.preventDefault();
+            }
+            else if (!document.querySelector('input[name="entrega"]:checked')) {
+                alert('Seleção obrigatória: Entrega')
+                delivery.focus()
+                event.preventDefault();
+            }
+            else {
+                form.submit()
+            }
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 - Mauricius - Italian Food. Todos os direitos reservados.</p>
+    </footer>
 </html>

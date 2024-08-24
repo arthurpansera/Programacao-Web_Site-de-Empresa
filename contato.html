@@ -6,65 +6,199 @@
     <link href="contato.css" rel="stylesheet">
     <title>Mauricius - Italian Food | Entre em Contato</title>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav class="nav">
-                <ul class="ul">
-                    <a href="home.html">Home</a>
-                    <a href="informacoes.html">Informações</a>
-                    <a href="contato.html">Contato</a>
-                    <a href="pedido.html">Pedido</a>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section class="container">
-        <h1 class="title">Entre em Contato Conosco</h1>
-        <div class="box">
-            <form action="mailto:mauriciusitalianfood@gmail.com" method="POST">
-                <fieldset>
-                    <legend><b>Formulário de Contato</b></legend>
-                    <br>
-                    <div class="inputBox">
-                        <input type="text" name="nome" id="nome" class="inputUser" required>
-                        <label for="nome" class="labelInput">Nome completo</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="cpf" id="cpf" class="inputUser" required>
-                        <label for="cpf" class="labelInput">CPF</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="email" id="email" class="inputUser" required>
-                        <label for="email" class="labelInput">E-mail</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="telefone" id="telefone" class="inputUser" required>
-                        <label for="telefone" class="labelInput">Telefone</label>
-                    </div>
-                    <br><br>
-                    <label for="data_nascimento" class="data"><b>Data de nascimento:</b></label>
-                    <input type="date" name="data_nascimento" id="data_nascimento" required>
-                    <br><br>
-                    <div class="textBox">
-                        <label for="mensagem" class="msg"><b>Mensagem:</b>
-                            <textarea name="mensagem" id="mensagem" placeholder="Escreva aqui" required></textarea>
-                        </label>
-                    </div>
-                    <br><br>
-                    <div class="buttons">
-                        <input type="submit" name="submit" id="submit">
-                        <button type="reset">Limpar</button>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    </section>
-</body>
-<footer>
-    <p>&copy; 2024 - Mauricius - Italian Food. Todos os direitos reservados.</p>
-</footer>
+    <body>
+        <header>
+            <div class="container">
+                <nav class="nav">
+                    <ul class="ul">
+                        <a href="home.html">Home</a>
+                        <a href="informacoes.html">Informações</a>
+                        <a href="contato.html">Contato</a>
+                        <a href="pedido.html">Pedido</a>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="container">
+            <h1 class="title">Entre em Contato Conosco</h1>
+            <div class="box">
+                <form name="form" id="form" action="mailto:mauriciusitalianfood@gmail.com" method="POST">
+                    <fieldset>
+                        <legend><b>Formulário de Contato</b></legend>
+                        <br>
+                        <div class="inputBox">
+                            <input type="text" name="nome" id="nome" class="inputUser" required>
+                            <label for="nome" class="labelInput">Nome completo</label>
+                        </div>
+                        <br><br>
+                        <div class="inputBox">
+                            <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                            <label for="cpf" class="labelInput">CPF</label>
+                        </div>
+                        <br><br>
+                        <div class="inputBox">
+                            <input type="text" name="email" id="email" class="inputUser" required>
+                            <label for="email" class="labelInput">E-mail</label>
+                        </div>
+                        <br><br>
+                        <div class="inputBox">
+                            <input type="text" name="telefone" id="telefone" class="inputUser" required>
+                            <label for="telefone" class="labelInput">Telefone</label>
+                        </div>
+                        <br><br>
+                        <label for="data_nascimento" class="data"><b>Data de nascimento:</b></label>
+                        <input type="date" name="data_nascimento" id="data_nascimento" required>
+                        <br><br>
+                        <div class="textBox">
+                            <label for="mensagem" class="msg"><b>Mensagem:</b>
+                                <textarea name="mensagem" id="mensagem" placeholder="Escreva aqui" required></textarea>
+                            </label>
+                        </div>
+                        <br><br>
+                        <div class="buttons">
+                            <input type="submit" name="submit" id="submit" onclick="btnSendOnClick()">
+                            <button type="reset">Limpar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </body>
+    <script>
+        const nome = document.getElementById('nome')
+        const cpf = document.getElementById('cpf')
+        const email = document.getElementById('email')
+        const telefone = document.getElementById('telefone')
+        const data_nascimento = document.getElementById('data_nascimento')
+        const mensagem = document.getElementById('mensagem')
+
+        function btnSendOnClick(){
+            if (nome.value == "") {
+                alert('Preenchimento obrigatório: Nome')
+                nome.focus()
+            }
+            else if (!isNaN(parseInt(nome.value))) {
+                alert('Tipo de dado inválido: Nome')
+                nome.value = ""
+                nome.focus()
+            }
+            else if (nome.value.includes('0')) {
+                alert('Tipo de dado inválido: Nome')
+                nome.value = ""
+                nome.focus()
+            }
+            else if (nome.value.includes('1')) {
+                alert('Tipo de dado inválido: Nome')
+                nome.value = ""
+                nome.focus()
+            }
+            else if (nome.value.includes('2')) {
+                alert('Tipo de dado inválido: Nome')
+                nome.value = ""
+                nome.focus()
+            }
+            else if (nome.value.includes('3')) {
+                alert('Tipo de dado inválido: Nome')
+                nome.value = ""
+                nome.focus()
+            }
+            else if (nome.value.includes('4')) {
+                alert('Tipo de dado inválido: Nome')
+                nome.value = ""
+                nome.focus()
+            }
+            else if (nome.value.includes('5')) {
+                alert('Tipo de dado inválido: Nome')
+                nome.value = ""
+                nome.focus()
+            }
+            else if (nome.value.includes('6')) {
+                alert('Tipo de dado inválido: Nome')
+                nome.value = ""
+                nome.focus()
+            }
+            else if (nome.value.includes('7')) {
+                alert('Tipo de dado inválido: Nome')
+                nome.value = ""
+                nome.focus()
+            }
+            else if (nome.value.includes('8')) {
+                alert('Tipo de dado inválido: Nome')
+                nome.value = ""
+                nome.focus()
+            }
+            else if (nome.value.includes('9')) {
+                alert('Tipo de dado inválido: Nome')
+                nome.value = ""
+                nome.focus()
+            }
+            else if (cpf.value == "") {
+                alert('Preenchimento obrigatório: CPF')
+                cpf.focus()
+            }
+            else if (isNaN(parseInt(cpf.value))) {
+                alert('Tipo de dado inválido: CPF')
+                cpf.value = ""
+                cpf.focus()
+            }
+            else if (email.value == "") {
+                alert('Preenchimento obrigatório: E-mail')
+                email.focus()
+            }
+            else if (!email.value.includes('@')) {
+                alert('Tipo de dado inválido: E-mail')
+                email.value = ""
+                email.focus()
+            }
+            else if (!email.value.includes('.com')) {
+                alert('Tipo de dado inválido: E-mail')
+                email.value = ""
+                email.focus()
+            }
+            else if (telefone.value == "") {
+                alert('Preenchimento obrigatório: Telefone')
+                telefone.focus()
+            }
+            else if (isNaN(parseInt(telefone.value))) {
+                alert('Tipo de dado inválido: Telefone')
+                telefone.value = ""
+                telefone.focus()
+            }
+            else if (data_nascimento.value == "") {
+                alert('Preenchimento obrigatório: Data de Nascimento');
+                data_nascimento.focus();
+            }
+            else if (validarIdade(data_nascimento.value)) {
+                alert('Tipo de dado inválido: Data de Nascimento');
+                data_nascimento.value = ""
+                data_nascimento.focus();
+            }
+            else if (mensagem.value == "") {
+                alert('Preenchimento obrigatório: Mensagem')
+                mensagem.focus()
+            }
+            else {
+                form.submit()
+            }
+        }
+
+        function validarIdade(data_nascimento) {
+            var hoje = new Date();
+            var nasc  = new Date(data_nascimento);
+            var idade = hoje.getFullYear() - nasc.getFullYear();
+            var m = hoje.getMonth() - nasc.getMonth();
+            if (m < 0 || (m === 0 && hoje.getDate() < nasc.getDate())) idade--;
+            
+            if(idade < 18) {
+                return true;
+            }
+
+            else {
+                return false;
+            }
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 - Mauricius - Italian Food. Todos os direitos reservados.</p>
+    </footer>
 </html>
