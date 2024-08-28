@@ -77,57 +77,7 @@
                 alert('Preenchimento obrigatório: Nome')
                 nome.focus()
             }
-            else if (!isNaN(parseInt(nome.value))) {
-                alert('Tipo de dado inválido: Nome')
-                nome.value = ""
-                nome.focus()
-            }
-            else if (nome.value.includes('0')) {
-                alert('Tipo de dado inválido: Nome')
-                nome.value = ""
-                nome.focus()
-            }
-            else if (nome.value.includes('1')) {
-                alert('Tipo de dado inválido: Nome')
-                nome.value = ""
-                nome.focus()
-            }
-            else if (nome.value.includes('2')) {
-                alert('Tipo de dado inválido: Nome')
-                nome.value = ""
-                nome.focus()
-            }
-            else if (nome.value.includes('3')) {
-                alert('Tipo de dado inválido: Nome')
-                nome.value = ""
-                nome.focus()
-            }
-            else if (nome.value.includes('4')) {
-                alert('Tipo de dado inválido: Nome')
-                nome.value = ""
-                nome.focus()
-            }
-            else if (nome.value.includes('5')) {
-                alert('Tipo de dado inválido: Nome')
-                nome.value = ""
-                nome.focus()
-            }
-            else if (nome.value.includes('6')) {
-                alert('Tipo de dado inválido: Nome')
-                nome.value = ""
-                nome.focus()
-            }
-            else if (nome.value.includes('7')) {
-                alert('Tipo de dado inválido: Nome')
-                nome.value = ""
-                nome.focus()
-            }
-            else if (nome.value.includes('8')) {
-                alert('Tipo de dado inválido: Nome')
-                nome.value = ""
-                nome.focus()
-            }
-            else if (nome.value.includes('9')) {
+            else if (nameWithoutNumbers(nome.value)) {
                 alert('Tipo de dado inválido: Nome')
                 nome.value = ""
                 nome.focus()
@@ -180,6 +130,11 @@
             else {
                 form.submit()
             }
+        }
+
+        function nameWithoutNumbers(nome) {
+            const re = /\d+/
+            return re.test(nome)
         }
 
         function validarIdade(data_nascimento) {
