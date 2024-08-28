@@ -165,9 +165,8 @@
                 cpf.focus()
                 event.preventDefault();
             }
-            else if (isNaN(parseInt(cpf.value))) {
+            else if (!isNumeric(cpf.value)) {
                 alert('Tipo de dado inválido: CPF')
-                cpf.value = ""
                 cpf.focus()
                 event.preventDefault();
             }
@@ -190,6 +189,12 @@
                 form.submit()
             }
         }
+
+        function isNumeric(cpf) {
+            const re = /^\d{3}\.?\d{3}\.?\d{3}-?\d{2}$/
+            return re.test(cpf)
+        }
+
     </script>
     <footer>
         <p>&copy; 2024 - Mauricius - Italian Food. Todos os direitos reservados.</p>
