@@ -86,7 +86,7 @@
                 alert('Preenchimento obrigatório: CPF')
                 cpf.focus()
             }
-            else if (isNaN(parseInt(cpf.value))) {
+            else if (!isNumeric(cpf.value)) {
                 alert('Tipo de dado inválido: CPF')
                 cpf.value = ""
                 cpf.focus()
@@ -95,13 +95,8 @@
                 alert('Preenchimento obrigatório: E-mail')
                 email.focus()
             }
-            else if (!email.value.includes('@')) {
-                alert('Tipo de dado inválido: E-mail')
-                email.value = ""
-                email.focus()
-            }
-            else if (!email.value.includes('.com')) {
-                alert('Tipo de dado inválido: E-mail')
+            else if (!validEmail(email.value)) {
+                alert('Tipo de dado inválido: Email')
                 email.value = ""
                 email.focus()
             }
@@ -109,7 +104,7 @@
                 alert('Preenchimento obrigatório: Telefone')
                 telefone.focus()
             }
-            else if (isNaN(parseInt(telefone.value))) {
+            else if (!validCellphone(telefone.value)) {
                 alert('Tipo de dado inválido: Telefone')
                 telefone.value = ""
                 telefone.focus()
@@ -135,6 +130,21 @@
         function nameWithoutNumbers(nome) {
             const re = /\d+/
             return re.test(nome)
+        }
+
+        function isNumeric(cpf) {
+            const re = /^\d{3}\.?\d{3}\.?\d{3}-?\d{2}$/
+            return re.test(cpf)
+        }
+
+        function validEmail(email) {
+            const re = /^\w.+@\w{3}.*\.\w{2,3}$/
+            return re.test(email)
+        }
+
+        function validCellphone(telefone) {
+            const re = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/
+            return re.test(telefone)
         }
 
         function validarIdade(data_nascimento) {
